@@ -59,23 +59,29 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                margin: 80px 0;
+                margin: 130px 0;
 
             }
-
-            .firstsection div {
-                width: 50%;
-            }
-
             .Leftsection {
-                font-size: 2.5rem;
-                align-items: center;
-
+                font-size: 3rem;
+                width: 50%;
+                }
+                .leftsection .buttons{
+                    padding: 12px;
+                }
+            .leftsection. btn {
+                padding: 12px;
+                background:#1e2167;
+                color: white;
+                border: 2px solid white;
+                border-radius: 6px;
+                font-size: 20px;
+                cursor: pointer;
             }
 
             .rightsection img {
-                width: 90%;
-                margin: 50px 0;
+                width: 100%;   
+                
             }
 
             .purple {
@@ -98,7 +104,7 @@
 
             .secondsection .box {
                 background: white;
-                width: 77vw;
+                width: 76vw;
                 height: 2px;
                 margin: 56px 0;
                 display: flex;
@@ -113,25 +119,48 @@
             }
 
             .image-top {
-                width: 23px;
+                width: 30px;
                 position: relative;
                 top: -32px;
                 left: -9px;
+                height: 30px;
             }
 
             .vertical-title {
                 position: relative;
                 top: 75px;
-                width: 150px;
-
+                width:150px;
+                font-size: large;
             }
+
 
             .vertical-desc {
                 position: relative;
                 top: 86px;
                 width: 150;
                 font-size: 9px;
-
+            }
+            footer{
+                background-color: rgb(82, 82, 173);
+             height: 233px;
+             
+            }
+            .footer{
+                text-align: center;
+                display: flex;
+                padding: 23px 122px;
+                justify-content: space-evenly;
+            }
+            .footer ul{
+                list-style: none;
+            }
+            .footer>div{
+                width: 223px;
+            }
+            .footer.footer-rights{
+                text-align: center;
+                color: gray;
+                padding: 12px 0;
             }
         </style>
     </head>
@@ -141,7 +170,7 @@
             <nav>
                 <div class="left"> KOMAL's portfolio</div>
                 <div class="right"></div>
-                <ul>
+               <ul>
                     <a href="/">
                         <li>Home
                     </a></li>
@@ -149,10 +178,10 @@
                         <li>About
                     </a></li>
                     <a href="/">
-                        <li>services
+                        <li>Skill
                     </a></li>
                     <a href="/">
-                        <li>projects
+                        <li>Projects
                     </a></li>
                     <a href="/">
                         <li>contact Me
@@ -160,37 +189,72 @@
                 </ul>
             </nav>
         </header>
+       
         <main>
             <section class="firstsection">
                 <div class="Leftsection">
-                    Hi,My name is<span class="purple"> Komal
-                    </span>
+                    Hi,My name is<span class="purple"> Komal</span>
                     <div>I am a passionate</div>
-
-                    <span id="element"></span>
-
+               <span id="element"></span><br>
+               <button class="btn btn-success btn-sm"> Resume Download</button>
+      <button class="btn btn-success btn-sm">  visit Github </button>
                 </div>
                 <div class="rightsection">
-                    <img src="bg.png" </div>
+                    <img  src="bg.png"></div>
             </section>
             <hr>
             <section class="secondsection">
                 <span class=" text-gray">What I have done so far</span>
                 <h1>work Experience</h1>
                 <div class="box">
-                    <div class="vertical" <img class="image-top" src="developer.png">
+                    <div class="vertical">
+                        <img class="image-top" src="html.png">
                         <div class="vertical-title">
                             HTML developer(2019-21)</div>
-                        <div class="vertical" <img class="image-top" src="developer.png">
+                        <div class="vertical">
+                            <img class="image-top" src="bk.png">
                             <div class="vertical-title">
                                 Full stack web developer(2021-23)</div>
-                            <div class="vertical" <img class="image-top" src="developer.png  alt="">
-        <div class=" vertical-title">
-                                java developer(2023-24)</div>
-                            <div class="vertical" <img class="image-top" src="developer.png"  alt="">
+                            <div class="vertical">
+                                <img class="image-top" src="developer.png">
+                                 <div class="vertical-title">
+                                java developer(2023-24)
+                            </div>
+                            <div class="vertical"> <img class="image-top" src="fullstack.png" alt="">
                                 <div class="vertical-title">
                                     fullstack java developer(2024-26)</div>
         </main>
+        <footer>
+            <div class="flex>
+                <div class="footer-first">
+                <h3> Developer portfolio</h3>    
+                    <div class="footer-second">
+                    <ul>
+                        <li>Home</li>
+                      <li>About</li>
+                     <li>services</li>
+                      <li>contact</li>
+                    </ul></div>
+                      
+                     <div class="footer-third">
+                     <ul>
+                        <li>Home</li>
+                      <li>About</li>
+                     <li>services</li>
+                      <li>contact</li>
+                    </ul></div>
+                        <div class="footer-fourth">
+            <ul>
+                        <li>Home</li>
+                      <li>About</li>
+                     <li>services</li>
+                      <li>contact</li>
+                    </ul></div></div>
+                    <div class="text-rights">
+                       copyright@www.komalportfolio.com | All rights reserved
+                    </div>
+        </footer>
+
         <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
         <script>
             var typed = new Typed('#element', {
