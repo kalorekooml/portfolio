@@ -1,94 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KOMAL-Developer portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                background-color: rgb(0, 0, 33);
-                color: white;
-                font-family: 'poppins',sans-serif;
-
-            }
-            nav {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                height:80px;
-                background-color: rgb(44, 44, 82);
-           }
-           nav ul{
-            display: flex;
-            justify-content: center;
-           }
-           nav ul li{
-            list-style: none;
-            margin: 0 23px;
-           }
-           .left {
-            font-size: 1.5rem;
-           }
-           .firstsection {
-            display: flex;
-            justify-content:space-around;
-            align-items: center;
-            margin: 80px 0;
-               
+<head>
+    <meta charset="UTF-8">
+    <title> komal Portfolio Website</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-           .firstsection div {
-            width: 30%;
-           }
-           .Leftsection{
-            font-size: 2.5rem;
-              align-items: center;
-    
-        }
-            .rightsection img{
-                width: 90%;
-            margin:50px 0;
-            }
-            .purple{
-                color: rgb(155, 72, 163);
-            }
-           
-        </style>
-    </head>
+body{
+    background-color: rgb(0,0,33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
 
-    <body>
-        <header>
-            <nav>
-                <div class="left"> KOMAL's portfolio</div>
-                <div class="right"></div>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>services</li>
-                    <li>projects</li>
-                    <li>contact Me</li> </ul>
-            </nav>
-        </header>
-        <main>
-            <section class ="firstsection">
-                <div class="Leftsection">
-                    Hi,My name is<span class="purple"> Komal 
-                    </span><div>I am a fullstack</div>
-                    <div> web developer</div>
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+}
+
+.left{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: rgb(17, 72, 163);
+}
+
+.firstsection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.firstsection > div {
+    width: 40%;
+}
+
+.leftsection {
+    font-size: 3rem;
+    margin: 30px 0;
+}
+
+.leftsection div {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.rightsection img {
+    width: 100%;
+
+}
+.purple{
+    color: rgb(170, 107, 228);
+}
+
+.section h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 110px; 
+}
+.section p {
+    font-size: 20px;   /* Paragraph size increased */
+    line-height: 1.6;  /* Better spacing */
+    color: white;
+    margin-left:110px;
+}
+.section-line {
+    border: none;
+    height: 3px;
+    background-color:rgb(170, 107, 228);
+    width: 80%;
+    margin :40px;
+    margin-left:120px;
+}
+.section h2{
+    color:white;
+    margin-bottom:10px;
+}
+#about {
+    margin-bottom: 50px;
+}
+.section h1{
+                color: rgb(240, 243, 245);
+                font-size: 30px;
+                margin-bottom: 10px;
+                margin-left: 110px;
+            }
+            .section p{
+                font-size: 20ppx;
+                line-height: 1.6;
+                color: white;
+                margin-left: 110;
+            }
+
+            .text-gray {
+                color: gray;
+            }
+
+            .secondsection {
+                max-width: 80vw;
+                margin: auto;
+                height: 80vh;
+            }
+
+            .secondsection h1 {
+                font-size: 1.9rem;
+            }
+
+            .secondsection .box {
+                background: white;
+                width: 76vw;
+                height: 2px;
+                margin: 56px 0;
+                display: flex;
+            }
+
+            .secondsection .vertical {
+                height: 93px;
+                width: 1px;
+                background-color: white;
+                display: flex;
+                margin: 0 120px;
+            }
+
+            .image-top {
+                width: 30px;
+                position: relative;
+                top: -32px;
+                left: -9px;
+                height: 30px;
+            }
+
+            .vertical-title {
+                position: relative;
+                top: 75px;
+                width:150px;
+                font-size: large;
+            }
+
+
+            .vertical-desc {
+                position: relative;
+                top: 86px;
+                width: 150;
+                font-size: 9px;
+            }
+#skills {
+    max-width: 800px;
+    margin-top: 150px;   /* space from About section */
+    margin-left: 0;
+    margin-right:10px;
+    padding-left: 60px;  /* horizontal shift */
+    text-align: left;    
+}
+
+#skills h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin-left:80px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: 600;
+    color:WHITE;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: #0f0440;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.skill-level {
+    width: 0;                 /* Start from 0 */
+    height: 10px;
+    background:rgb(103, 125, 175);
+    transition: width 1.5s ease-in-out;  /* Smooth animation */
+}
+
+#skills {
+    margin-bottom:100px;
+}
+ #projects {
+      margin-top: 80px;
+      padding: 80px 10%;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+   .section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: left;
+  position: relative;
+  left: -50px;   /* shifts slightly left */
+}
+    /* Project container using grid */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2 , 420px);
+  gap: 90px; /* spacing between cards */
+  margin-top: 50px;
+}
+
+/* Third project spans two columns and is centered */
+.third-project {
+  grid-column: 1 / span 2; /* span both columns */
+  width: 420px;   /* larger card */
+  margin: 0 auto;
+}
+
+/* Project card styling */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;         /* larger padding */
+  min-height: 250px;     /* taller cards */
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  width : 420px;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .third-project {
+    grid-column: auto;
+    width  : 420px;
+  }
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact {
+    display: flex;
+    flex-direction: column;       /* stack heading + container */
+    justify-content: center;      /* vertical centering */
+    align-items: center;          /* horizontal centering */
+    height: 100vh;                /* full viewport height */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Contact Heading */
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Container for left + right columns */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    width: 100%;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* LEFT SIDE */
+.contact-left p {
+    margin: 15px 0;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: scale(1.2);
+}
+
+/* RIGHT SIDE FORM */
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-right textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 25px;
+    background: #ff004f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* stack columns on mobile */
+    }
+    #contact h2 {
+        font-size: 36px;
+    }
+}
+
+ 
+</style>
+<header>
+    <nav>
+        <div class="left">KOMAl'sPortfolio</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="firstsection">
+    <div class="leftsection">
+        <div>Hi, My name is <span>KOMAL</span></div>
+        <div>  And I am passionate about</div>
+        <span id="element"></span><br>
+<button><a href="./kalorekomal .pdf" download=""> Resume Download</a></button>
+                    <button><a href="https://github.com/kalorekooml"> visit Github </a></button>
                 
-                </div>
-                <div class="rightsection">
-                <img src="bg.png"</div>
-            </section>
-        </main>
-        </body>
+    </div>
 
+    <div class="rightsection">
+        <img src="bg.png" alt="">
+    </div>
+</div>
+</section>
+<hr class="section-line">
+<section id="about" class="section">
+    <h1>About Me</h1>
+    <p>
+        I’m a Information Technology student with a strong foundation in software development, I 
+am proficient in Java and C through<br> both academic coursework and hands-on experience. 
+Passionate about technology and problem-solving, I am eager to<br> contribute to real-world 
+software projects and continuously grow as a developer in a dynamic, professional 
+environment.
+    </p>
+       <main>
+            
+            <hr>
+            <section class="secondsection">
+                <span class=" text-gray">What I have done so far</span>
+                <h1>work Experience</h1>
+                <div class="box">
+                    <div class="vertical">
+                        <img class="image-top" src="html.png">
+                        <div class="vertical-title">
+                            HTML developer(2019-21)</div>
+                        <div class="vertical">
+                            <img class="image-top" src="bk.png">
+                            <div class="vertical-title">
+                                Full stack web developer(2021-23)</div>
+                            <div class="vertical">
+                                <img class="image-top" src="developer.png">
+                                 <div class="vertical-title">
+                                java developer(2023-24)
+                            </div>
+                            <div class="vertical"> <img class="image-top" src="fullstack.png" alt="">
+                                <div class="vertical-title">
+                                    fullstack java developer(2024-26)</div>
+        </main>
+    <setion>
+
+      <section id="skills" class="section">
+    <section id="skills">
+    <h2>My Skills</h2>
+
+   <div class="skill">
+        <div class="skill-name">HTML,CSS,bootstrap</div>
+        <div class="skill-bar">
+            <div class="skill-level" data-level="90%"></div>
+        </div>
+    </div>
+        </div>
+        <div class="skill-item">
+            <span class="skill-name">Java,corejava</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="90%"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <span class="skill-name"> MY SQL</span>
+            <div class="skill-bar">
+                  <div class="skill-level" data-level="90%"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <span class="skill-name">.NET</span>
+            <div class="skill-bar">
+                 <div class="skill-level" data-level="70%"></div>
+            </div>
+        </div>
+    </div>
+
+ <section id="projects">
+  <h2 class="section-title">My Projects</h2>
+
+  <div class="project-container">
+    <!-- First Project -->
+    <div class="project-card">
+      <h3> <h1>1</h1><B> Noise Suppressed Image Enhancing Environment (NSIEE)</B> </h3>
+      <ul>
+        <li> Aim
+
+To reduce image noise and enhance overall image clarity.</li>
+        <li>Techniques Used
+
+Traditional Filters: Applying standard noise reduction filters.
+
+Adaptive Algorithms: Using intelligent methods that adjust based on image characteristics.
+
+Deep Learning Models: Implementing AI-based models for advanced noise removal.</li>
+        <li>Objective
+
+To improve overall image quality.</li>
+<li>Applications
+<ul>
+<li>Medical Imaging: Enhancing diagnostic image accuracy.</li>
+
+<li>Surveillance Systems: Improving visibility and recognition.</li>
+
+<li>Digital Photography: Producing clearer and sharper images.</li>
+      </ul>
+    </div>
+
+    <!-- Second Project -->
+    <div class="project-card">
+      <h3><h1>2</h1><B> Hospital management System  (using SQL)</B></h3>
+      <ul>
+        <li>Purpose of the System:
+
+Design and develop a software solution to manage hospital operations efficiently.</li>
+        <li>Core Areas of Management:
+<ul>
+<li> Records: Organizing and maintaining patient information.</li>
+
+<li>Doctor Schedules: Managing doctors' availability and shifts.</li>
+
+<li> Scheduling and tracking patient appointments.</li>
+
+<li> Histories: Storing patient medical history and past treatments.</li>
+
+<li> Managing prescribed medications and treatments.</li>
+
+<li> Handling patient billing, insurance, and payments.</li>
+
+Departmental Coordination: Ensuring smooth coordination between hospital departments.</li></ul>
+        <li>Objectives:
+
+Improve Healthcare Delivery: Enhance patient care and service efficiency.
+
+Reduce Administrative Workload: Automate tasks to save time and reduce human error.
+
+Ensure Data Security and Accuracy: Protect sensitive information and maintain accurate records.</li>
+        
+      </ul>
+    </div>
+
+    
+  </div>
+</section>
+<section id="contact">
+    <h2 class="contact-wrapper">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- Left Side -->
+        <div class="contact-left">
+            <p>✉kalorekomal@gmail.com</p>
+            <p>📞9021368577</p>
+
+            <div class="social-icons">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">💼</a>
+            </div>
+
+
+        <!-- Right Side Form -->
+        <div class="contact-right">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Copyright © 2026 KOMAL KALORE</p>
+</footer>
+            </p>
+         </div>
+    </h3>
+</section>
+
+
+
+        </form>
+    </div>
+</section>
+</body>
 </html>
+</section>
+</div>
+
+</div>
+</section>
+</section>
+</main>
+<script>
+const skillsSection = document.querySelector("#skills");
+const skillLevels = document.querySelectorAll(".skill-level");
+
+function animateSkills() {
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
+
+    if (sectionPos < screenPos) {
+        skillLevels.forEach(skill => {
+            skill.style.width = skill.getAttribute("data-level");
+        });
+        // Remove scroll listener after animation
+        window.removeEventListener("scroll", animateSkills);
+    }
+}
+
+// Trigger animation on scroll
+window.addEventListener("scroll", animateSkills);
+</script>
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<!-- Setup and start animation! -->
+<script>
+    var typed = new Typed('#element', {
+      strings: ['web developer', 'java developer.'],
+      typeSpeed: 50,
+    });
+</script>
+</body>
