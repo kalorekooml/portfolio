@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> komal Portfolio Website</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komal Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-    <style>
+
+<style>
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: rgb(0,0,33);
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    background:#000021;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    line-height:1.6;
 }
 
+/* NAVBAR */
 nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    background-color: rgb(18, 18, 62);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#12123e;
+    flex-wrap:wrap;
 }
 
-.left{
-    font-size: 1.5rem;
-    font-weight: 600;
+nav h1{
+    font-size:22px;
 }
 
 nav ul{
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li{
-    list-style: none;
-    margin: 0 23px;
+    list-style:none;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+    text-decoration:none;
+    color:white;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-    color: rgb(17, 72, 163);
+    color:#aa6be4;
 }
 
+/* HERO */
 .firstsection{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 8%;
+    flex-wrap:wrap;
 }
 
-
-.firstsection > div {
-    width: 40%;
+.leftsection{
+    flex:1;
+    min-width:280px;
 }
 
-.leftsection {
-    font-size: 3rem;
-    margin: 30px 0;
+.leftsection h2{
+    font-size:32px;
 }
 
-.leftsection div {
-    font-size: 1.5rem;
-    margin: 10px 0;
+.rightsection{
+    flex:1;
+    text-align:center;
+    min-width:280px;
 }
 
-.rightsection img {
-    width: 100%;
-
-}
-.purple{
-    color: rgb(170, 107, 228);
+.rightsection img{
+    width:100%;
+    max-width:400px;
 }
 
-.section h1 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 110px; 
+/* BUTTONS */
+.buttons{
+    margin-top:20px;
 }
-.section p {
-    font-size: 20px;   /* Paragraph size increased */
-    line-height: 1.6;  /* Better spacing */
-    color: white;
-    margin-left:110px;
-}
-.section-line {
-    border: none;
-    height: 3px;
-    background-color:rgb(170, 107, 228);
-    width: 80%;
-    margin :40px;
-    margin-left:120px;
-}
-.section h2{
+
+.buttons a{
+    text-decoration:none;
     color:white;
-    margin-bottom:10px;
+    background:#aa6be4;
+    padding:10px 20px;
+    border-radius:6px;
+    margin-right:10px;
+    display:inline-block;
 }
-#about {
-    margin-bottom: 50px;
+
+/* SECTIONS */
+.section{
+    padding:60px 8%;
 }
-.section h1{
+
+.section h2{
+    margin-bottom:20px;
+    font-size:28px;
+}.section h1{
                 color: rgb(240, 243, 245);
                 font-size: 30px;
                 margin-bottom: 10px;
@@ -174,252 +170,145 @@ nav ul li a:hover{
                 width: 150;
                 font-size: 9px;
             }
-#skills {
-    max-width: 800px;
-    margin-top: 150px;   /* space from About section */
-    margin-left: 0;
-    margin-right:10px;
-    padding-left: 60px;  /* horizontal shift */
-    text-align: left;    
+
+/* SKILLS */
+.skills{
+    max-width:600px;
 }
 
-#skills h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0 0 20px 0;
+.skill-item{
+    margin-bottom:20px;
 }
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin-left:80px;
+.skill-bar{
+    width:100%;
+    height:10px;
+    background:#111;
+    border-radius:6px;
+    overflow:hidden;
 }
 
-.skill-item {
-    display: flex;
-    flex-direction: column;
+.skill-level{
+    height:100%;
+    width:0;
+    background:#aa6be4;
+    transition:1.5s;
 }
 
-.skill-name {
-    font-weight: 600;
-    color:WHITE;
-    margin-bottom: 8px;
-    font-size: 18px;
+/* PROJECTS */
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.skill-bar {
-    width: 100%;
-    height: 12px;
-    background: #0f0440;
-    overflow: hidden;
-    border-radius: 6px;
+.project-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    transition:.3s;
 }
 
-.skill-level {
-    width: 0;                 /* Start from 0 */
-    height: 10px;
-    background:rgb(103, 125, 175);
-    transition: width 1.5s ease-in-out;  /* Smooth animation */
+.project-card:hover{
+    transform:translateY(-5px);
 }
 
-#skills {
-    margin-bottom:100px;
-}
- #projects {
-      margin-top: 80px;
-      padding: 80px 10%;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-   .section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-align: left;
-  position: relative;
-  left: -50px;   /* shifts slightly left */
-}
-    /* Project container using grid */
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(2 , 420px);
-  gap: 90px; /* spacing between cards */
-  margin-top: 50px;
+/* CONTACT */
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
-/* Third project spans two columns and is centered */
-.third-project {
-  grid-column: 1 / span 2; /* span both columns */
-  width: 420px;   /* larger card */
-  margin: 0 auto;
-}
-
-/* Project card styling */
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;         /* larger padding */
-  min-height: 250px;     /* taller cards */
-  border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  width : 420px;
-}
-
-/* Hover effect */
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-}
-
-/* Responsive for small screens */
-@media (max-width: 768px) {
-  .project-container {
-    grid-template-columns: 1fr; /* stack vertically */
-  }
-
-  .third-project {
-    grid-column: auto;
-    width  : 420px;
-  }
-}
-
-/* ===== CONTACT SECTION ===== */
-#contact {
-    display: flex;
-    flex-direction: column;       /* stack heading + container */
-    justify-content: center;      /* vertical centering */
-    align-items: center;          /* horizontal centering */
-    height: 100vh;                /* full viewport height */
-    padding: 20px;
-    color: white;
-    text-align: center;
-}
-
-/* Contact Heading */
-#contact h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-/* Container for left + right columns */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    max-width: 900px;
-    width: 100%;
-    background: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-/* LEFT SIDE */
-.contact-left p {
-    margin: 15px 0;
-}
-
-/* Social Icons */
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ff004f;
-    transform: scale(1.2);
-}
-
-/* RIGHT SIDE FORM */
 .contact-right input,
-.contact-right textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border-radius: 6px;
-    border: none;
-    background: #262626;
-    color: white;
-    font-size: 16px;
+.contact-right textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:none;
+    background:#262626;
+    color:white;
+    border-radius:6px;
 }
 
-.contact-right textarea {
-    height: 150px;
-    resize: none;
+.btn{
+    background:#ff004f;
+    padding:10px 20px;
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-/* BUTTON */
-.btn {
-    padding: 12px 25px;
-    background: #ff004f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    margin-top:40px;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-}
+/* MOBILE */
+@media(max-width:768px){
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr; /* stack columns on mobile */
+    .firstsection{
+        flex-direction:column;
+        text-align:center;
     }
-    #contact h2 {
-        font-size: 36px;
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        justify-content:center;
     }
 }
-
- 
 </style>
-<header>
-    <nav>
-        <div class="left">KOMAl'sPortfolio</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>Komal Portfolio</h1>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
 <section class="firstsection">
     <div class="leftsection">
-        <div>Hi, My name is <span>KOMAL</span></div>
-        <div>  And I am passionate about</div>
-        <span id="element"></span><br>
-<button><a href="./kalorekomal .pdf" download=""> Resume Download</a></button>
-                    <button><a href="https://github.com/kalorekooml"> visit Github </a></button>
-                
+        <h2>Hi, I'm Komal</h2>
+        <p>I am passionate about <span id="element"></span></p>
+
+        <div class="buttons">
+            <a href="./kalorekomal .pdf" download=""> Resume Download</a></button>
+            <a href="https://github.com/kalorekooml">visit Github </a></button>
+        </div>
     </div>
 
     <div class="rightsection">
-        <img src="bg.png" alt="">
+        <img src="bg.png" alt="Profile Image">
     </div>
-</div>
 </section>
-<hr class="section-line">
+
+<!-- ABOUT -->
 <section id="about" class="section">
-    <h1>About Me</h1>
+    <h2>About Me</h2>
     <p>
-        I’m a Information Technology student with a strong foundation in software development, I 
+       I’m a Information Technology student with a strong foundation in software development, I 
 am proficient in Java and C through<br> both academic coursework and hands-on experience. 
 Passionate about technology and problem-solving, I am eager to<br> contribute to real-world 
 software projects and continuously grow as a developer in a dynamic, professional 
 environment.
     </p>
+</section>
        <main>
             
             <hr>
@@ -444,48 +333,49 @@ environment.
                                 <div class="vertical-title">
                                     fullstack java developer(2024-26)</div>
         </main>
-    <setion>
-
-      <section id="skills" class="section">
-    <section id="skills">
+<!-- SKILLS -->
+<section id="skills" class="section">
     <h2>My Skills</h2>
 
-   <div class="skill">
-        <div class="skill-name">HTML,CSS,bootstrap</div>
-        <div class="skill-bar">
-            <div class="skill-level" data-level="90%"></div>
+    <div class="skills">
+        <div class="skill-item">
+            <p>HTML, CSS, Bootstrap</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <p>Java</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <p>MySQL</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="85%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <p>.NET</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-level="70%"></div>
+            </div>
         </div>
     </div>
-        </div>
-        <div class="skill-item">
-            <span class="skill-name">Java,corejava</span>
-            <div class="skill-bar">
-              <div class="skill-level" data-level="90%"></div>
-            </div>
-        </div>
-        <div class="skill-item">
-            <span class="skill-name"> MY SQL</span>
-            <div class="skill-bar">
-                  <div class="skill-level" data-level="90%"></div>
-            </div>
-        </div>
-        <div class="skill-item">
-            <span class="skill-name">.NET</span>
-            <div class="skill-bar">
-                 <div class="skill-level" data-level="70%"></div>
-            </div>
-        </div>
-    </div>
+</section>
 
- <section id="projects">
-  <h2 class="section-title">My Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>My Projects</h2>
 
-  <div class="project-container">
-    <!-- First Project -->
-    <div class="project-card">
-      <h3> <h1>1</h1><B> Noise Suppressed Image Enhancing Environment (NSIEE)</B> </h3>
-      <ul>
-        <li> Aim
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Noise Suppressed Image Enhancing Environment</h3>
+            <li> Aim
 
 To reduce image noise and enhance overall image clarity.</li>
         <li>Techniques Used
@@ -506,17 +396,11 @@ To improve overall image quality.</li>
 
 <li>Digital Photography: Producing clearer and sharper images.</li>
       </ul>
-    </div>
+        </div>
 
-    <!-- Second Project -->
-    <div class="project-card">
-      <h3><h1>2</h1><B> Hospital management System  (using SQL)</B></h3>
-      <ul>
-        <li>Purpose of the System:
-
-Design and develop a software solution to manage hospital operations efficiently.</li>
-        <li>Core Areas of Management:
-<ul>
+        <div class="project-card">
+            <h3>Hospital Management System</h3>
+            ul>
 <li> Records: Organizing and maintaining patient information.</li>
 
 <li>Doctor Schedules: Managing doctors' availability and shifts.</li>
@@ -539,92 +423,53 @@ Reduce Administrative Workload: Automate tasks to save time and reduce human err
 Ensure Data Security and Accuracy: Protect sensitive information and maintain accurate records.</li>
         
       </ul>
+        </div>
     </div>
-
-    
-  </div>
 </section>
-<section id="contact">
-    <h2 class="contact-wrapper">
 
-    <h2 class="section-title">Contact Me</h2>
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
 
     <div class="contact-container">
-
-        <!-- Left Side -->
-        <div class="contact-left">
-            <p>✉kalorekomal@gmail.com</p>
-            <p>📞9021368577</p>
-
-            <div class="social-icons">
-                <a href="#">🌐</a>
-                <a href="#">📘</a>
-                <a href="#">📷</a>
-                <a href="#">💼</a>
-            </div>
-
-
-        <!-- Right Side Form -->
-        <div class="contact-right">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+        <div>
+            <p>Email: kalorekomal@gmail.com</p>
+            <p>Phone: 9021368577</p>
         </div>
 
+        <div class="contact-right">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button class="btn">Submit</button>
+        </div>
     </div>
 </section>
 
-<footer class="footer">
-    <p>Copyright © 2026 KOMAL KALORE</p>
+<footer>
+    <p>© 2026 Komal Kalore</p>
 </footer>
-            </p>
-         </div>
-    </h3>
-</section>
 
+<script>
+/* Skill Animation */
+const skills = document.querySelectorAll(".skill-level");
+window.addEventListener("scroll", () => {
+    skills.forEach(skill => {
+        const position = skill.getBoundingClientRect().top;
+        if(position < window.innerHeight){
+            skill.style.width = skill.getAttribute("data-level");
+        }
+    });
+});
 
+/* Typed Animation */
+var typed = new Typed('#element', {
+    strings: ['Web Developer', 'Java Developer'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop:true
+});
+</script>
 
-        </form>
-    </div>
-</section>
 </body>
 </html>
-</section>
-</div>
-
-</div>
-</section>
-</section>
-</main>
-<script>
-const skillsSection = document.querySelector("#skills");
-const skillLevels = document.querySelectorAll(".skill-level");
-
-function animateSkills() {
-    const sectionPos = skillsSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
-
-    if (sectionPos < screenPos) {
-        skillLevels.forEach(skill => {
-            skill.style.width = skill.getAttribute("data-level");
-        });
-        // Remove scroll listener after animation
-        window.removeEventListener("scroll", animateSkills);
-    }
-}
-
-// Trigger animation on scroll
-window.addEventListener("scroll", animateSkills);
-</script>
-<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-<!-- Setup and start animation! -->
-<script>
-    var typed = new Typed('#element', {
-      strings: ['web developer', 'java developer.'],
-      typeSpeed: 50,
-    });
-</script>
-</body>
